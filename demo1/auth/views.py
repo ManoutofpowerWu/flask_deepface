@@ -77,6 +77,16 @@ def login():
     return jsonify(ret), 200
 
 
+@blueprint.route("/", methods=["GET"])
+def home():
+    return "<h1>Hello FLASK<h1>"
+
+@blueprint.route("/test", methods=["POST"])
+def test():
+    print("aaa")
+    return "<h2>testPost<h2>"
+
+
 @blueprint.route("/refresh", methods=["POST"])
 @jwt_required(refresh=True)
 def refresh():
