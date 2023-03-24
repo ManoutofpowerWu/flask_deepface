@@ -10,7 +10,7 @@ from flask_jwt_extended import (
 from demo1.models import User
 from demo1.extensions import pwd_context, jwt, apispec
 from demo1.auth.helpers import revoke_token, is_token_revoked, add_token_to_database
-
+import json
 
 blueprint = Blueprint("auth", __name__, url_prefix="/auth")
 

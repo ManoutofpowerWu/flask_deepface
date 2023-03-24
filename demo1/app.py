@@ -13,6 +13,7 @@ def create_app(testing=False):
     """Application factory, used to create application"""
     app = Flask("demo1")
     CORS(app)
+    app.debug=True
     app.config.from_object("demo1.config")
 
     if testing is True:
